@@ -19,7 +19,7 @@ namespace DummyEngine
 
         private int _currentLetterCount = 0; // Anzahl der sichtbaren Buchstaben
         private double _timeSinceLastLetter = 0; // Zeit seit dem letzten sichtbaren Buchstaben
-        private double _letterDelay = 50; // Zeitverzögerung zwischen den Buchstaben in Millisekunden
+        private double _letterDelay = 25; // Zeitverzögerung zwischen den Buchstaben in Millisekunden
 
         private AssetsManager _assetInstance => AssetsManager.Instance;
         private KeyboardState previousKeyboardState;
@@ -31,7 +31,8 @@ namespace DummyEngine
             synthesizer = new SpeechSynthesizer();
             synthesizer.SetOutputToDefaultAudioDevice();
             synthesizer.SpeakCompleted += OnSpeakCompleted;
-            synthesizer.Rate = 10;
+            synthesizer.Rate = 5;
+            synthesizer.SelectVoice("Microsoft Hedda Desktop");
         }
 
         private void OnSpeakCompleted(object sender, SpeakCompletedEventArgs e)
@@ -71,14 +72,20 @@ namespace DummyEngine
 
             //Calculate position
             contentPosition.Y = contentPosition.Y + nameDimensions.Y + fontHeight;
-            contentPosition.X = contentPosition.X + 16 + speakerImage.Width;
+            contentPosition.X = contentPosition.X + 16 + 200;
 
-            namePosition.X = namePosition.X + speakerImage.Width;
+            namePosition.X = namePosition.X + 200;
 
             if (speakerImage != null)
             {
-                var imagePosition = new Vector2(0, 0); // Position, wo das Bild gezeichnet werden soll
-                spriteBatch.Draw(speakerImage, imagePosition, Color.White);
+                float aspectRatio = (float)speakerImage.Width / (float)speakerImage.Height;
+                int newWidth = 200;  // Maximale Breite in Pixeln
+                int newHeight = (int)(newWidth / aspectRatio);  // Höhe anpassen, um das Seitenverhältnis zu wahren
+
+                var destinationRectangle = new Rectangle(0, 0, newWidth, newHeight);  // Position und Größe für das Zeichnen
+                var sourceRectangle = new Rectangle(0, 0, speakerImage.Width, speakerImage.Height);  // Der Bereich des Bildes, der gezeichnet werden soll
+
+                spriteBatch.Draw(speakerImage, destinationRectangle, sourceRectangle, Color.White);
             }
 
             //Draw Background

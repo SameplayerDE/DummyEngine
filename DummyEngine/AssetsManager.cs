@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DummyEngine
 {
@@ -34,6 +35,28 @@ namespace DummyEngine
         {
             Texture2D texture = Content.Load<Texture2D>(assetName);
             textures[assetName] = texture;
+        }
+
+        public void LoadTextureFromFolder(string folderName, string assetName, string fileExtension)
+        {
+            string fullPath = Path.Combine(folderName, assetName + "." + fileExtension);
+
+            using (FileStream fileStream = new FileStream(fullPath, FileMode.Open))
+            {
+                Texture2D texture = Texture2D.FromStream(Game.GraphicsDevice, fileStream);
+                textures[assetName] = texture;
+            }
+        }
+
+        public void LoadTextureFromFolder(string path)
+        {
+            string fullPath = Path.Combine(path);
+
+            using (FileStream fileStream = new FileStream(fullPath, FileMode.Open))
+            {
+                Texture2D texture = Texture2D.FromStream(Game.GraphicsDevice, fileStream);
+                textures[path] = texture;
+            }
         }
 
         public Texture2D GetTexture(string assetName)

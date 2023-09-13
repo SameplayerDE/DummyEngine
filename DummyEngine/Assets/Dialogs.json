@@ -1,0 +1,102 @@
+﻿[
+  {
+    "ID": "0",
+    "Content": "Hey Leute, habt ihr vom großen Turnier gehört?",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "1",
+    "Content": "Ja, ich habe die Ankündigung gesehen. Es sieht ziemlich spannend aus!",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "2",
+    "Content": "Turnier? Um was geht es denn?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "3",
+    "Content": "Es ist ein großes Gaming-Turnier, und der Gewinner bekommt einen Preis.",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "4",
+    "Content": "Cool! Welches Spiel?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "5",
+    "Content": "Rocket League. Wir sollten als Team teilnehmen!",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "6",
+    "Content": "Das wäre genial!",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "7",
+    "Content": "Ich bin dabei, aber ich bin nicht so gut wie ihr.",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "8",
+    "Content": "Kein Problem, wir üben zusammen.",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "9",
+    "Content": "Genau, Teamarbeit ist der Schlüssel.",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "10",
+    "Content": "In Ordnung, wann fangen wir an?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "11",
+    "Content": "Wie wäre es mit heute Abend?",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "12",
+    "Content": "Perfekt, ich richte alles ein.",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "13",
+    "Content": "Super, ich freue mich schon darauf!",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "14",
+    "Content": "Gibt es irgendwelche speziellen Regeln, die wir beachten sollten?",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "15",
+    "Content": "Nicht wirklich, nur das übliche Format: 3 gegen 3.",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "16",
+    "Content": "Und wie viele Teams nehmen teil?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "17",
+    "Content": "Sie haben gesagt, dass es 32 Teams geben wird.",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "18",
+    "Content": "Das wird hart, aber wir schaffen das.",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "19",
+    "Content": "Ja, wir werden unser Bestes geben und Spaß haben!",
+    "SpeakerID": "2"
+  }
+]
