@@ -53,9 +53,7 @@ namespace DummyEngine
             _assetInstance.LoadTexture("Alisa");
             _assetInstance.LoadTexture("textbox");
 
-            _gameState.Scenes = new();
-            _gameState.Scenes.Add(SceneManager.Instance.GetSceneById("0"));
-            _gameState.CurrentSceneIndex = 0;
+            _gameState.CurrentSceneIndex = "0";
         }
 
         protected override void Update(GameTime gameTime)

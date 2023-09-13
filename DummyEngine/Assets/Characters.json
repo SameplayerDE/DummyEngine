@@ -1,17 +1,27 @@
 ﻿[
   {
-    "ID": "0",
+    "ID": "1",
     "Name": "Patrick",
     "ImagePath": "Assets/Images/patrick.jpg"
   },
   {
-    "ID": "1",
+    "ID": "2",
     "Name": "Oktay",
     "ImagePath": "Assets/Images/oktay.jpg"
   },
   {
-    "ID": "2",
+    "ID": "0",
     "Name": "Nicolas",
     "ImagePath": "Assets/Images/nicolas.jpeg"
+  },
+  {
+    "ID": "3",
+    "Name": "Sophia",
+    "ImagePath": "Assets/Images/sophia.png"
+  },
+  {
+    "ID": "4",
+    "Name": "Lena",
+    "ImagePath": "Assets/Images/lena.png"
   }
 ]

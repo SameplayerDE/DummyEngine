@@ -20,6 +20,7 @@ namespace DummyEngine
         }
 
         private Dictionary<string, Scene> _scenes = new();
+        public int Count => _scenes.Count;
 
         public void Init()
         {
@@ -41,6 +42,10 @@ namespace DummyEngine
 
         public Scene GetSceneById(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                return null;
+            }
             if (_scenes.TryGetValue(id, out Scene scene))
             {
                 return scene;

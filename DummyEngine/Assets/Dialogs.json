@@ -1,102 +1,197 @@
 ﻿[
   {
     "ID": "0",
-    "Content": "Hey Leute, habt ihr vom großen Turnier gehört?",
+    "Content": "Wie steht's, Patrick, hast du schon das neue Mädchen gesehen?",
     "SpeakerID": "0"
   },
   {
     "ID": "1",
-    "Content": "Ja, ich habe die Ankündigung gesehen. Es sieht ziemlich spannend aus!",
+    "Content": "Sophia, oder? Sie ist ziemlich hübsch, muss ich sagen.",
     "SpeakerID": "1"
   },
   {
     "ID": "2",
-    "Content": "Turnier? Um was geht es denn?",
+    "Content": "Naja, ich finde Lena eigentlich interessanter.",
     "SpeakerID": "2"
   },
   {
     "ID": "3",
-    "Content": "Es ist ein großes Gaming-Turnier, und der Gewinner bekommt einen Preis.",
+    "Content": "Lena? Die Neue im Büro?",
     "SpeakerID": "0"
   },
   {
     "ID": "4",
-    "Content": "Cool! Welches Spiel?",
+    "Content": "Ja, genau. Sie ist echt klug und hat einen tollen Sinn für Humor.",
     "SpeakerID": "2"
   },
   {
     "ID": "5",
-    "Content": "Rocket League. Wir sollten als Team teilnehmen!",
+    "Content": "Ich würde sagen, beide sind echte Herzensbrecher.",
     "SpeakerID": "1"
   },
   {
     "ID": "6",
-    "Content": "Das wäre genial!",
+    "Content": "Aber wer von beiden würde wohl zu dir passen, Oktay?",
     "SpeakerID": "0"
   },
   {
     "ID": "7",
-    "Content": "Ich bin dabei, aber ich bin nicht so gut wie ihr.",
+    "Content": "Haha, ich weiß nicht. Vielleicht sollte ich mein Glück bei beiden versuchen.",
     "SpeakerID": "2"
   },
   {
     "ID": "8",
-    "Content": "Kein Problem, wir üben zusammen.",
+    "Content": "Du Schlingel, so gewinnt man keine Herzen.",
     "SpeakerID": "1"
   },
   {
     "ID": "9",
-    "Content": "Genau, Teamarbeit ist der Schlüssel.",
-    "SpeakerID": "0"
-  },
-  {
-    "ID": "10",
-    "Content": "In Ordnung, wann fangen wir an?",
+    "Content": "Man weiß ja nie. Ich hab' ja immer noch euch als Wingmen, oder?",
     "SpeakerID": "2"
   },
   {
+    "ID": "20",
+    "Content": "Jetzt oder nie, Jungs.",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "21",
+    "Content": "Ich geh mal zu Sophia, wir sehen uns später.",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "22",
+    "Content": "Ich versuch mein Glück bei Lena, wünscht mir Glück!",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "23",
+    "Content": "Dann überlasse ich euch mal eurem Schicksal. Viel Erfolg!",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "24",
+    "Content": "Warum hat der Football-Spieler auf dem Feld ein Smartphone?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "25",
+    "Content": "Keine Ahnung, warum?",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "26",
+    "Content": "Um seine Touchdowns zu checken!",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "27",
+    "Content": "Haha, guter Witz, Oktay!",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "28",
+    "Content": "Was sagt man zu einem Football-Team voller Lauchs?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "29",
+    "Content": "Was denn?",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "30",
+    "Content": "Die Miami Dolphins! Haha!",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "31",
+    "Content": "Haha, brutal! Du bist echt gemein, Oktay!",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "32",
+    "Content": "Ich bin beleidigt!",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "33",
+    "Content": "Das nennt man dann wohl einen 'Lauchdown', oder?",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "34",
+    "Content": "Das war jetzt wirklich zu viel!",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "10",
+    "Content": "Hey, ich habe gehört, es gibt am Wochenende eine Party. Sollten wir hingehen?",
+    "SpeakerID": "0"
+  },
+  {
     "ID": "11",
-    "Content": "Wie wäre es mit heute Abend?",
+    "Content": "Natürlich, ich bin dabei!",
     "SpeakerID": "1"
   },
   {
     "ID": "12",
-    "Content": "Perfekt, ich richte alles ein.",
-    "SpeakerID": "0"
+    "Content": "Ich auch, aber nur wenn Sophia und Lena auch kommen.",
+    "SpeakerID": "2"
   },
   {
     "ID": "13",
-    "Content": "Super, ich freue mich schon darauf!",
-    "SpeakerID": "2"
+    "Content": "Das lässt sich bestimmt einrichten. Ich frage sie mal.",
+    "SpeakerID": "0"
   },
   {
     "ID": "14",
-    "Content": "Gibt es irgendwelche speziellen Regeln, die wir beachten sollten?",
-    "SpeakerID": "0"
+    "Content": "Cool, das wird bestimmt ein Spaß!",
+    "SpeakerID": "1"
   },
   {
     "ID": "15",
-    "Content": "Nicht wirklich, nur das übliche Format: 3 gegen 3.",
-    "SpeakerID": "1"
+    "Content": "Definitiv. Wer weiß, vielleicht finde ich ja meine Traumfrau.",
+    "SpeakerID": "2"
   },
   {
     "ID": "16",
-    "Content": "Und wie viele Teams nehmen teil?",
-    "SpeakerID": "2"
-  },
-  {
-    "ID": "17",
-    "Content": "Sie haben gesagt, dass es 32 Teams geben wird.",
-    "SpeakerID": "0"
-  },
-  {
-    "ID": "18",
-    "Content": "Das wird hart, aber wir schaffen das.",
+    "Content": "Oder vielleicht zwei, wie es scheint.",
     "SpeakerID": "1"
   },
   {
-    "ID": "19",
-    "Content": "Ja, wir werden unser Bestes geben und Spaß haben!",
+    "ID": "17",
+    "Content": "Haha, ihr seid echt die Besten!",
     "SpeakerID": "2"
+  },
+  {
+    "ID": "18",
+    "Content": "So, wir sind hier. Wo sind Sophia und Lena?",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "19",
+    "Content": "Da sind sie, und sie sehen umwerfend aus.",
+    "SpeakerID": "1"
+  },
+  {
+    "ID": "20",
+    "Content": "Jetzt oder nie, Jungs.",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "21",
+    "Content": "Ich geh mal zu Sophia, wir sehen uns später.",
+    "SpeakerID": "0"
+  },
+  {
+    "ID": "22",
+    "Content": "Ich versuch mein Glück bei Lena, wünscht mir Glück!",
+    "SpeakerID": "2"
+  },
+  {
+    "ID": "23",
+    "Content": "Dann überlasse ich euch mal eurem Schicksal. Viel Erfolg!",
+    "SpeakerID": "1"
   }
 ]
