@@ -1,31 +1,26 @@
-﻿using DummyEngine.Models;
+﻿using System.Collections.Generic;
+using System.IO;
+using DummyEngine.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DummyEngine
+namespace DummyEngine;
+
+public class CharacterLoader
 {
-    public class CharacterLoader
+    public static CharacterLoader Instance { get; } = new CharacterLoader();
+
+    static CharacterLoader()
     {
+    }
 
-        public static CharacterLoader Instance { get; } = new CharacterLoader();
+    private CharacterLoader()
+    {
+    }
 
-        static CharacterLoader()
-        {
-        }
-
-        private CharacterLoader()
-        {
-        }
-
-        public List<Character> LoadCharacters(string jsonFilePath)
-        {
-            string jsonData = System.IO.File.ReadAllText(jsonFilePath);
-            List<Character> characters = JsonConvert.DeserializeObject<List<Character>>(jsonData);
-            return characters;
-        }
+    public List<Character> LoadCharacters(string jsonFilePath)
+    {
+        string jsonData = File.ReadAllText(jsonFilePath);
+        List<Character> characters = JsonConvert.DeserializeObject<List<Character>>(jsonData);
+        return characters;
     }
 }

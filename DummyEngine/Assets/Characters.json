@@ -1,27 +1,17 @@
 ﻿[
   {
+    "ID": "0",
+    "Name": "Gustav",
+    "ImagePath": "Assets/Images/gustav.jpeg"
+  },
+  {
     "ID": "1",
-    "Name": "Patrick",
-    "ImagePath": "Assets/Images/patrick.jpg"
+    "Name": "Rick",
+    "ImagePath": "Assets/Images/rick.jpg"
   },
   {
     "ID": "2",
-    "Name": "Oktay",
-    "ImagePath": "Assets/Images/oktay.jpg"
-  },
-  {
-    "ID": "0",
-    "Name": "Nicolas",
-    "ImagePath": "Assets/Images/nicolas.jpeg"
-  },
-  {
-    "ID": "3",
-    "Name": "Sophia",
-    "ImagePath": "Assets/Images/sophia.png"
-  },
-  {
-    "ID": "4",
-    "Name": "Lena",
-    "ImagePath": "Assets/Images/lena.png"
+    "Name": "Georg",
+    "ImagePath": "Assets/Images/georg.jpg"
   }
 ]

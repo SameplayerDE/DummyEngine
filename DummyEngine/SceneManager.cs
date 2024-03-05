@@ -1,56 +1,54 @@
-﻿using DummyEngine.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using DummyEngine.Models;
 
-namespace DummyEngine
+namespace DummyEngine;
+
+public class SceneManager
 {
-    public class SceneManager
+    public static SceneManager Instance { get; } = new SceneManager();
+
+    static SceneManager()
     {
-        public static SceneManager Instance { get; } = new SceneManager();
+    }
 
-        static SceneManager()
+    private SceneManager()
+    {
+    }
+
+    private Dictionary<string, Scene> _scenes = new();
+    public int Count => _scenes.Count;
+
+    public void Init()
+    {
+        SceneLoader sceneLoader = SceneLoader.Instance;
+        string jsonFilePath = "Assets/Scenes.json"; // Replace with the actual path to your JSON file
+        List<Scene> scenes = sceneLoader.LoadScenes(jsonFilePath);
+
+        // Now you have a list of characters loaded from the JSON file
+        foreach (Scene scene in scenes)
         {
-        }
-
-        private SceneManager()
-        {
-        }
-
-        private Dictionary<string, Scene> _scenes = new();
-        public int Count => _scenes.Count;
-
-        public void Init()
-        {
-            SceneLoader sceneLoader = SceneLoader.Instance;
-            string jsonFilePath = "Assets/Scenes.json"; // Replace with the actual path to your JSON file
-            List<Scene> scenes = sceneLoader.LoadScenes(jsonFilePath);
-
-            // Now you have a list of characters loaded from the JSON file
-            foreach (Scene scene in scenes)
+            scene.Dialogs = new();
+            foreach (string dialogIds in scene.DialogIds)
             {
-                scene.Dialogs = new();
-                foreach (string dialogIds in scene.DialogIds)
-                {
-                    scene.Dialogs.Add(DialogManager.Instance.GetDialogById(dialogIds));
-                }
-                _scenes[scene.ID] = scene;
+                scene.Dialogs.Add(DialogManager.Instance.GetDialogById(dialogIds));
             }
-        }
 
-        public Scene GetSceneById(string id)
+            _scenes[scene.ID] = scene;
+        }
+    }
+
+    public Scene GetSceneById(string id)
+    {
+        if (string.IsNullOrEmpty(id))
         {
-            if (string.IsNullOrEmpty(id))
-            {
-                return null;
-            }
-            if (_scenes.TryGetValue(id, out Scene scene))
-            {
-                return scene;
-            }
             return null;
         }
+
+        if (_scenes.TryGetValue(id, out Scene scene))
+        {
+            return scene;
+        }
+
+        return null;
     }
 }

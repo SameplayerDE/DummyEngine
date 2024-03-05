@@ -3,80 +3,74 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace DummyEngine
+namespace DummyEngine;
+
+public class Game1 : Game
 {
-    public class Game1 : Game
+    private GraphicsDeviceManager _graphics;
+    private SpriteBatch _spriteBatch;
+    private GameState _gameState;
+    private AssetsManager _assetInstance => AssetsManager.Instance;
+
+    //Assets
+    private SpriteFont _font;
+
+    //Characters
+    private Character _oktay;
+    private Character _merle;
+    private Character _tessa;
+    private Character _alisa;
+
+    //Scenes
+    private Scene _introScene;
+
+    public Game1()
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
-        private GameState _gameState;
-        private AssetsManager _assetInstance => AssetsManager.Instance;
+        _graphics = new GraphicsDeviceManager(this);
+        Content.RootDirectory = "Content";
+        IsMouseVisible = true;
+    }
 
-        //Assets
-        private SpriteFont _font;
+    protected override void Initialize()
+    {
+        _gameState = new GameState();
+        _assetInstance.Init(this);
+        CharacterManager.Instance.Init();
+        DialogManager.Instance.Init();
+        SceneManager.Instance.Init();
+        base.Initialize();
+    }
 
-        //Characters
-        private Character _oktay;
-        private Character _merle;
-        private Character _tessa;
-        private Character _alisa;
+    protected override void LoadContent()
+    {
+        _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-        //Scenes
-        private Scene _introScene;
+        _assetInstance.LoadFont("font");
 
-        public Game1()
-        {
-            _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            IsMouseVisible = true;
-        }
+        _gameState.CurrentSceneIndex = "0";
+    }
 
-        protected override void Initialize()
-        {
-            _gameState = new GameState();
-            _assetInstance.Init(this);
-            CharacterManager.Instance.Init();
-            DialogManager.Instance.Init();
-            SceneManager.Instance.Init();
-            base.Initialize();
-        }
+    protected override void Update(GameTime gameTime)
+    {
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+            Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
 
-        protected override void LoadContent()
-        {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+        _gameState.Update(gameTime);
 
-            _assetInstance.LoadFont("font");
-            _assetInstance.LoadTexture("generic");
-            _assetInstance.LoadTexture("Oktay");
-            _assetInstance.LoadTexture("Merle");
-            _assetInstance.LoadTexture("Tessa");
-            _assetInstance.LoadTexture("Alisa");
-            _assetInstance.LoadTexture("textbox");
+        base.Update(gameTime);
+    }
 
-            _gameState.CurrentSceneIndex = "0";
-        }
+    protected override void Draw(GameTime gameTime)
+    {
+        GraphicsDevice.Clear(Color.White);
 
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+        _spriteBatch.Begin();
 
-            _gameState.Update(gameTime);
+        _gameState.Draw(_spriteBatch, gameTime);
 
-            base.Update(gameTime);
-        }
+        _spriteBatch.End();
 
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.White);
-
-            _spriteBatch.Begin();
-
-            _gameState.Draw(_spriteBatch, gameTime);
-
-            _spriteBatch.End();
-
-            base.Draw(gameTime);
-        }
+        base.Draw(gameTime);
     }
 }

@@ -1,25 +1,32 @@
 ﻿[
   {
     "ID": "0",
-    "Name": "Die neuen Mädels",
+    "Name": "In The Classroom",
     "Next": "1",
-    "Dialogs": [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+    "Dialogs": [
+      "00",
+      "01",
+      "02"
+    ]
   },
   {
     "ID": "1",
-    "Name": "Der große Auftritt",
+    "Name": "On The Big Stage",
     "Next": "2",
-    "Dialogs": [ "10", "11", "12", "13", "14", "15", "16", "17" ]
+    "Dialogs": [
+      "10",
+      "11",
+      "12"
+    ]
   },
   {
     "ID": "2",
-    "Name": "Die Entscheidung",
+    "Name": "Death",
     "Next": "3",
-    "Dialogs": [ "18", "19", "20", "21", "22", "23" ]
-  },
-  {
-    "ID": "3",
-    "Name": "Football-Witze und Lauch-Angriffe",
-    "Dialogs": [ "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34" ]
+    "Dialogs": [
+      "20",
+      "21",
+      "22"
+    ]
   }
 ]

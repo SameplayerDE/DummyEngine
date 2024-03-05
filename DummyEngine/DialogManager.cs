@@ -1,9 +1,6 @@
-﻿using DummyEngine.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using DummyEngine.Models;
 
 namespace DummyEngine
 {
@@ -31,6 +28,23 @@ namespace DummyEngine
             foreach (Dialog dialog in dialogs)
             {
                 dialog.Speaker = CharacterManager.Instance.GetCharacterById(dialog.SpeakerID);
+                
+                var pattern = @"%(\d+)";
+                var regex = new Regex(pattern);
+                
+                var replacedText = regex.Replace(dialog.Content, match =>
+                {
+                    var speakerID = match.Groups[1].Value;
+                    var speaker = CharacterManager.Instance.GetCharacterById(speakerID);
+                    if (speaker != null)
+                    {
+                        return speaker.Name;
+                    }
+                    return match.Value;
+                });
+
+                dialog.Content = replacedText;
+                
                 _dialogs[dialog.ID] = dialog;
             }
         }

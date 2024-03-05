@@ -1,31 +1,26 @@
-﻿using DummyEngine.Models;
+﻿using System.Collections.Generic;
+using System.IO;
+using DummyEngine.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DummyEngine
+namespace DummyEngine;
+
+public class SceneLoader
 {
-    public class SceneLoader
+    public static SceneLoader Instance { get; } = new SceneLoader();
+
+    static SceneLoader()
     {
+    }
 
-        public static SceneLoader Instance { get; } = new SceneLoader();
+    private SceneLoader()
+    {
+    }
 
-        static SceneLoader()
-        {
-        }
-
-        private SceneLoader()
-        {
-        }
-
-        public List<Scene> LoadScenes(string jsonFilePath)
-        {
-            string jsonData = System.IO.File.ReadAllText(jsonFilePath);
-            List<Scene> scenes = JsonConvert.DeserializeObject<List<Scene>>(jsonData);
-            return scenes;
-        }
+    public List<Scene> LoadScenes(string jsonFilePath)
+    {
+        string jsonData = File.ReadAllText(jsonFilePath);
+        List<Scene> scenes = JsonConvert.DeserializeObject<List<Scene>>(jsonData);
+        return scenes;
     }
 }
